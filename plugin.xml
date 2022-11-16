@@ -74,7 +74,6 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
             <service android:name="by.chemerisuk.cordova.firebase.FirebaseMessagingPluginService" android:exported="false">
                 <intent-filter>
                     <action android:name="com.google.firebase.MESSAGING_EVENT"/>
