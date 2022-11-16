@@ -58,7 +58,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     </platform>
 
     <platform name="android">
-        <preference name="ANDROID_FIREBASE_BOM_VERSION" default="31.0.3" />
+        <preference name="ANDROID_FIREBASE_BOM_VERSION" default="23.0.0" />
 
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="FirebaseMessaging">
