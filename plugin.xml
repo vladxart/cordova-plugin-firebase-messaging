@@ -58,7 +58,6 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     </platform>
 
     <platform name="android">
-        <preference name="ANDROID_FIREBASE_MESSAGING_VERSION" default="22.0.+"/>
         <preference name="ANDROID_FIREBASE_BOM_VERSION" default="31.0.3" />
 
         <config-file target="res/xml/config.xml" parent="/*">
@@ -75,6 +74,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
             <service android:name="by.chemerisuk.cordova.firebase.FirebaseMessagingPluginService" android:exported="false">
                 <intent-filter>
                     <action android:name="com.google.firebase.MESSAGING_EVENT"/>
@@ -85,7 +85,6 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 
         <dependency id="cordova-support-android-plugin" version="~2.0.4" />
         
-        <framework src="com.google.firebase:firebase-messaging:$ANDROID_FIREBASE_MESSAGING_VERSION" />
         <framework src="platform('com.google.firebase:firebase-bom:$ANDROID_FIREBASE_BOM_VERSION')" />
         <framework src="com.google.firebase:firebase-messaging" />
         <framework src="me.leolin:ShortcutBadger:1.1.22@aar"/>
